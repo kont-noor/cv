@@ -1,0 +1,123 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+\moderncvtheme[blue]{classic}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+%\usepackage{hyperref}
+%\hypersetup{colorlinks=true, urlcolor=addresscolor}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% personal data
+\name{Nickolay Kondratenko}{}
+\title{Senior software engineer}
+\phone[mobile]{+38-(097)-713-54-27}
+\email{nickolay.kondratenko@gmail.com}
+\social[linkedin]{nickolay-kondratenko}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+
+\begin {document}
+\maketitle
+
+\section{Summary}
+\cvline{}{
+    Senior Backend Developer with more than 10 years of experience in web development, software architecture, and infrastructure management. Specialized in Ruby on Rails, PostgreSQL performance tuning, and scalable API design, with expertise in query optimization, partitioning, indexing strategies, and high-load application architecture. Strong background in microservices, background job processing (Sidekiq, Golang workers), and caching solutions.
+}
+\cvline{}{
+    Extensive experience in DevOps and cloud infrastructure, particularly with OpenStack-based environments at InnovoCloud. Skilled in containerized deployments (Docker, Kubernetes), infrastructure automation (Terraform, Ansible), and cloud services (AWS, DigitalOcean, OpenStack). Expertise in server provisioning, security (LUKS encryption), backups (Borg), HAProxy/Nginx configurations, and centralized logging (Graylog).
+}
+\cvline{}{
+    Passionate about building high-performance, resilient systems, improving database efficiency, and optimizing large-scale applications.
+}
+
+\section{Skills}
+
+\cvline{Languages:}{Ruby, Go, JavaScript, TypeScript, SQL, RegExp, XML, HTML5, Bash}
+\cvline{Frameworks:}{\textbf{Ruby:} Ruby on Rails, Sinatra, Spree}
+\cvline{}{\textbf{JavaScript:} React.js, Angular, Vue.js, jQuery}
+\cvline{}{\textbf{Testing and Automation:} RSpec, Testify, Cucumber, Spinach, Capybara}
+\cvline{Databases}{\textbf{Relational:} PostgreSQL, MySQL, SQLite}
+\cvline{}{\textbf{NoSQL \& Caching:} Redis, MongoDB}
+\cvline{}{\textbf{Search:} Elasticsearch}
+\cvline{DevOps:}{\textbf{Cloud Platforms:} OpenStack, DigitalOcean, AWS}
+\cvline{}{\textbf{Infrastructure as Code (IaC):} Terraform, Ansible}
+\cvline{}{\textbf{Containerization \& Orchestration:} Docker, Kubernetes}
+\cvline{}{\textbf{Security \& Backup:} LUKS encryption, Borg backup, Google Authenticator, fail2ban}
+\cvline{}{\textbf{Load Balancing \& Reverse Proxy:} HAProxy, Nginx}
+\cvline{}{\textbf{Logging \& Monitoring: } Graylog, Airbrake, New Relic, StatusCake}
+\cvline{}{\textbf{CI/CD \& Automation:} GitLab CI/CD, GitHub Actions}
+\cvline{Tools:}{Bash, Git, Postman, Copilot, ChatGPT, Jira, Redmine, Vim, Unix shell tools, Firebug, DevToolbar}
+\cvline{Competencies:}{Web Development, Software Engineering, Microservices, Services Architecture, High-Availability, Scalable Systems, Unit Testing, Integration Testing, E2E Testing, Behavior-Driven Development (BDD)}
+\pagebreak
+
+\section{Work Experience}
+\cventry{2022--present}{Senior Software Engineer}{\href{https://www.simplybusiness.co.uk}{SimplyBusiness}}{}{}{
+    \begin{itemize}
+        \item \textbf{Delivering D2C:} Developed and maintained direct-to-customer (D2C) solutions, ensuring high availability and performance.
+        \item \textbf{Processing Support:} Provided technical support and optimizations for core processing systems, improving efficiency and stability.
+        \item \textbf{Code Refactoring:} Led refactoring efforts to enhance code maintainability, scalability, and adherence to best practices.
+        \item \textbf{Technical Investigation:} Diagnosed and resolved complex technical issues, optimizing system performance and reliability.
+        \item \textbf{Code Review \& Mentoring:} Conducted comprehensive code reviews, promoting clean architecture and best practices, while mentoring junior developers.
+        \item \textbf{Technologies used:} Ruby on Rails, Go, RSpec, BDD, Docker, Terraform, EKS, GitHub actions, Amplitude, A/B testing, Snowflake, NewRelic, Airbrake
+    \end{itemize}
+}
+\cventry{2021--2022}{Senior Software Engineer}{\href{https://kudo.ai}{Kudo}}{}{}{
+    \begin{itemize}
+        \item \textbf{Feature Development \& Bug Fixing:} Designed and implemented new features and resolved critical bugs to improve application stability and performance.
+        \item \textbf{MVP for Replay Functionality:} Initiated and developed a Minimum Viable Product (MVP) for the Replay functionality.
+        \item \textbf{Code Reviews \& Best Practices:} Conducted thorough code reviews, enforcing SOLID principles and design patterns to improve code quality.
+        \item \textbf{Tech Stack \& Tools:} Ruby on Rails (RoR), SOLID, Design Patterns, Airbrake, Postman, AWS, GitHub, BDD, RSpec.
+    \end{itemize}
+}
+\cventry{2017--2021}{Senior Backend Developer}{\href{https://www.united-signals.com}{UnitedSignals}}{}{}{
+    \begin{itemize}
+        \item Implemented a service that communicated with brokers via FIX protocol, ensuring reliable and low-latency event processing for the trading system.
+        \item Developed integrations with multiple banks using FIX, improving transaction efficiency.
+        \item Maintained dedicated servers hosted on InnovoCloud using OpenStack \& Ansible.
+        \item Optimized HAProxy/Nginx setup, moving SSL termination to HAProxy, which reduced latency by ~30\%, improved request throughput, and enabled logging of agent IPs for audit purposes.
+        \item Developed an audit logging system in Rails, allowing tracking of all high-privilege user actions for security compliance.
+        \item Implemented centralized log collection using Graylog, improving system observability and debugging efficiency.
+        \item Encrypted critical data sections with LUKS, enhancing system security.
+        \item Improved server access security, reducing administrative overhead and connection time.
+        \item Added Google Authenticator-based MFA for secure server access.
+        \item Implemented backup with Borg and S3 storage, ensuring secure and automated data protection.
+        \item Developed a configurable system allowing multiple onboarding processes per user across various contexts.
+        \item Added custom and generic features to enhance flexibility for different business cases.
+        \item Conducted thorough code reviews, enforcing best practices and security guidelines.
+        \item Mentored team members in Rails, DevOps, and trading system architecture.
+        \item \textbf{Technologies Used:} Ruby, Golang, Rails, Sidekiq, RSpec, PostgreSQL, Redis, Ansible, FIX, AWS, OpenStack, LUKS, Borg, HAProxy, Nginx, Graylog, Google Authenticator
+     \end{itemize}
+}
+\cventry{2015--2017}{Senior Backend Developer}{\href{https://www.lookingglasscyber.com}{Lookingglass}}{}{}{
+    \begin{itemize}
+        \item Developed \& Optimized Threat Intelligence Aggregation Framework
+        \item Led investigation, specification, estimation, and development for migrating threat intelligence feeds, ensuring a smooth transition with minimal downtime.
+        \item Conducted thorough code reviews, improving code quality, maintainability, and security.
+        \item \textbf{Technologies Used:} Ruby, Rails, Sidekiq, PostgreSQL, RSpec, VCR, XPath, JSON, XML, Bash, Stream Parsing, Airbrake
+    \end{itemize}
+}
+\cventry{2014--2015}{Software Engineer}{\href{https://www.integracredit.com}{IntegraCredit}}{}{}{
+    \begin{itemize}
+        \item Planning of services interaction structure
+        \item Optimized services interaction so it fixed deadlock issues
+        \item Business logic development
+        \item Development of the number of special financial gems (Amortization, RCC).
+        \item Planning and development of services architecture
+        \item Investigating new technologies and best practices
+        \item \textbf{Technologies Used:} Rails, REST, Service-oriented architecture, JSend, AngularJS, Foreman, Rails engines
+    \end{itemize}
+}
+
+\section{Education}
+\cventry{2004--2009}{Master in Computer Science}{Kharkiv National University of Radioelectronics}{Computer Science}{}{}
+
+\end{document}
